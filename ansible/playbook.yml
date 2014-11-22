@@ -1,0 +1,6 @@
+- hosts: all
+  sudo: true
+  roles:
+     - { role: geerlingguy.java }
+     - { role: f500.elasticsearch, elasticsearch_cluster_name: "jcdopendata" }
+     - { role: f500.php_cli, php_error_reporting: "E_ALL" }
